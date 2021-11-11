@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Nubimetrics" Class="Challenge1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Nubimetrics;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="NubimetricsConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetCountryByCountryId" Method="GetCountryByCountryId">
+    <Parameter Name="CountryId" Parameter="countryId" Type="System.String" DbType="VarChar(4)" />
+    <ElementType Name="GetCountryByCountryIdResult">
+      <Column Name="CountryId" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrencyId" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Locale" Type="System.String" DbType="VarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

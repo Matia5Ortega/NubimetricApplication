@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD5A5429-D6A0-4ACE-B948-FE9BCBD3291C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessComponents</RootNamespace>
+    <AssemblyName>BusinessComponents</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Challenge1\Countries.cs" />
+    <Compile Include="Challenge2\Items.cs" />
+    <Compile Include="Challenge3\Users.cs" />
+    <Compile Include="Challenge4\Currencies.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\Nubimetrics.DataAccess.csproj">
+      <Project>{f1e042e7-8c5d-458a-87fb-574b37c47878}</Project>
+      <Name>Nubimetrics.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nubimetrics.Common\Nubimetrics.Common.csproj">
+      <Project>{C449EE0F-66EA-47BD-ABFC-84ED190F47EE}</Project>
+      <Name>Nubimetrics.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nubimetrics.Entities\Nubimetrics.Entities.csproj">
+      <Project>{1EF115F6-21FB-4A91-9560-2F4C3E0ACE45}</Project>
+      <Name>Nubimetrics.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nubimetrics.MethodParameters\Nubimetrics.MethodParameters.csproj">
+      <Project>{60DB46A8-2F77-433A-8EB9-6FC3C462651B}</Project>
+      <Name>Nubimetrics.MethodParameters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nubimetrics.WSAdapter\Nubimetrics.WSAdapter.csproj">
+      <Project>{e568bdec-3cde-4c42-bf5a-994a7a762e82}</Project>
+      <Name>Nubimetrics.WSAdapter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Nubimetrics" Class="Challenge4DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Nubimetrics;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="NubimetricsConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.SaveCurrenciesConversionFile" Method="SaveCurrenciesConversionFile">
+    <Parameter Name="FileContent" Parameter="fileContent" Type="System.String" DbType="VarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

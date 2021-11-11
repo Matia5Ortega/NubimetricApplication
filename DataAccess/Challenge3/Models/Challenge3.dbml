@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Nubimetrics" Class="Challenge3DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Nubimetrics;Integrated Security=True" SettingsObjectName="DataAccess.Properties.Settings" SettingsPropertyName="NubimetricsConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetUsers" Method="GetUsers">
+    <ElementType Name="GetUsersResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Mail" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AddUser" Method="AddUser">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Mail" Parameter="mail" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteUser" Method="DeleteUser">
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateUsers" Method="UpdateUsers">
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Mail" Parameter="mail" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

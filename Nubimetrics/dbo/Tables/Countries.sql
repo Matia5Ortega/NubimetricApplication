@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Countries]
+(
+	[CountryId] VARCHAR(4) NOT NULL PRIMARY KEY,
+	[Name] VARCHAR(200) NOT NULL,
+	[Locale] VARCHAR(300) NOT NULL,
+	[CurrencyId] VARCHAR(5) NOT NULL
+);
